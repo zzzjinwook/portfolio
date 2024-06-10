@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jinwook Web Portfolio</title>
     <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
     <div class="wrapper">
         <div class="header">
@@ -18,7 +20,8 @@
         <div class="portfolio">
             <div class="portfolio-item">
                 <div class="portfolio-wrapper">
-                    <img src="src/img/pengreenlive.png" alt="pengreenlive" id="img-pengreenlive" class="portfolio-image">
+                    <img src="src/img/pengreenlive.png" alt="pengreenlive" id="img-pengreenlive"
+                        class="portfolio-image">
                 </div>
                 <div class="portfolio-title">PenGreenLive</div>
                 <div class="portfolio-subtitle">채팅 기반 실시간 라이브 커머스 플랫폼</div>
@@ -54,22 +57,24 @@
         </div>
         <div class="about">
             <p class="about-title">"길이 없으면 길을 찾아라, 찾아도 없으면 길을 만들어라"</p>
-            <p class="about-text">                
+            <p class="about-text">
                 개발자는 코드를 작성하는 사람이 아니라, 문제를 창의적으로 해결하는 사람이라고 생각합니다.
                 난관에 봉착하면 문제의 근본적인 원인을 찾아 문제를 명확히 이해하고, 다양한 해결법을 모색하여, 다른 사람의 의견을 들어보고 가능한 모든 방안을 고려하는 것을 좋아합니다.
             </p>
             <p class="about-text">
                 자신의 역량을 믿고 혼자 고생하는 개발자가 아닌, 협업을 함에 있어 성실하게 제게 부여된 책임을 끝까지 완수하는 끈기를 지닌, 팀원들이 믿고 맡길 수 있는 개발자로 성장하고자 합니다.
             </p>
-            <a href="#" class="more-link">More about me</a>
+            <a href="#" class="more-link">개발자 홍진욱, 더 알아보기</a>
         </div>
-        <div class="contact">
-            <p class="contact-text">Get in touch <span class="contact-subtext">(Click to copy)</span></p>
+        <div class="contact" onclick="copyEmail()">
+            <p class="contact-text">Click Me <span class="contact-subtext">(눌러서 이메일 복사하기)</span></p>
             <p class="contact-email">zzzjinwook98@gmail.com</p>
         </div>
         <div class="footer">
             <p>© jinwook Hong 2024</p>
         </div>
+        <div id="copiedMessage" class="copied-message">이메일이 복사되었습니다!</div>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>
