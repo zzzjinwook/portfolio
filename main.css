@@ -60,6 +60,7 @@
     font-weight: 900;
     font-style: normal;
 }
+
 body {
     font-family: 'Freesentation', sans-serif;
     font-weight: 100;
@@ -82,7 +83,6 @@ body {
     z-index: 1000;
     box-sizing: border-box;
 }
-
 
 .nav-link {
     font-size: 22px;
@@ -121,7 +121,25 @@ body {
 .portfolio-item {
     width: 48%;
     margin-bottom: -200px;
+    position: relative;
     text-align: center;
+    overflow: hidden;
+    transition: all .8s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.portfolio-item:hover {
+    transform: scale(.95);
+    transition: all .8s cubic-bezier(0.2, 0.6, 0.2, 1);
+    cursor: pointer;
+}
+
+.portfolio-wrapper {
+    overflow: hidden;
+}
+
+.portfolio-wrapper:hover .portfolio-image {
+    transform: scale(1.2);
+    transition: all .8s cubic-bezier(0.2, 0.6, 0.2, 1);
 }
 
 .portfolio-item:nth-child(even) {
@@ -129,9 +147,12 @@ body {
 }
 
 .portfolio-image {
+    display: block;
     width: 100%;
     height: auto;
     border-radius: 24px;
+    object-fit: cover;
+    transition: all .8s cubic-bezier(0.2, 0.6, 0.2, 1);
 }
 
 .portfolio-title {
@@ -160,6 +181,12 @@ body {
     font-size: 21px;
     font-weight: 300;
     line-height: 35px;
+    color: #333333;
+}
+
+.about-title {
+    font-size: 28px;
+    font-weight: 600;
     color: #333333;
 }
 
@@ -193,7 +220,7 @@ body {
 .contact-email {
     font-size: 70px;
     font-weight: 600;
-    margin-top: 4px;
+    margin-top: -24px;
     color: #111111;
 }
 
@@ -220,14 +247,15 @@ body {
     }
 
     .nav-container {
-        padding: 0 20px; /* 바디와 동일한 여백 */
-        box-sizing: border-box; /* 추가 */
+        padding: 0 20px;
+        /* 바디와 동일한 여백 */
+        box-sizing: border-box;
+        /* 추가 */
     }
 
     .portfolio-item {
         width: 48%;
     }
-    
 }
 
 @media (max-width: 768px) {
@@ -237,12 +265,11 @@ body {
     }
 
     .portfolio-item {
-        margin-top:300px;
+        margin-top: 300px;
         width: 100%;
     }
 
     .contact-email {
         font-size: 36px;
     }
-
 }
