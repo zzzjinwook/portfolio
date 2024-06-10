@@ -60,6 +60,10 @@
     font-weight: 900;
     font-style: normal;
 }
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Freesentation', sans-serif;
     font-weight: 100;
@@ -77,12 +81,13 @@ body {
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    margin: 30px auto;
     top: 0;
     z-index: 1000;
     box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 30px 0px 20px 0px;
 }
-
 
 .nav-link {
     font-size: 22px;
@@ -121,7 +126,26 @@ body {
 .portfolio-item {
     width: 48%;
     margin-bottom: -200px;
+    position: relative;
     text-align: center;
+    overflow: hidden;
+    transition: all .8s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.portfolio-item:hover {
+    transform: scale(.95);
+    transition: all .8s cubic-bezier(0.2, 0.6, 0.2, 1);
+    cursor: pointer;
+}
+
+.portfolio-wrapper {
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.portfolio-wrapper:hover .portfolio-image {
+    transform: scale(1.1);
+    transition: all .8s cubic-bezier(0.2, 0.6, 0.2, 1);
 }
 
 .portfolio-item:nth-child(even) {
@@ -129,9 +153,11 @@ body {
 }
 
 .portfolio-image {
+    display: block;
     width: 100%;
     height: auto;
-    border-radius: 24px;
+    object-fit: cover;
+    transition: all .8s cubic-bezier(0.2, 0.6, 0.2, 1);
 }
 
 .portfolio-title {
@@ -163,6 +189,12 @@ body {
     color: #333333;
 }
 
+.about-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333333;
+}
+
 .more-link {
     display: block;
     font-size: 22px;
@@ -178,6 +210,8 @@ body {
     width: 100%;
     text-align: left;
     max-width: 760px;
+    cursor: pointer;
+
 }
 
 .contact-text {
@@ -193,7 +227,7 @@ body {
 .contact-email {
     font-size: 70px;
     font-weight: 600;
-    margin-top: 4px;
+    margin-top: -24px;
     color: #111111;
 }
 
@@ -213,6 +247,20 @@ body {
     margin: 0;
 }
 
+.copied-message {
+    display: none;
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
 @media (max-width: 1200px) {
     .wrapper {
         padding-left: 20px;
@@ -220,29 +268,32 @@ body {
     }
 
     .nav-container {
-        padding: 0 20px; /* 바디와 동일한 여백 */
-        box-sizing: border-box; /* 추가 */
+        padding: 0 20px;
+        /* 바디와 동일한 여백 */
+        box-sizing: border-box;
+        /* 추가 */
     }
 
     .portfolio-item {
         width: 48%;
     }
-    
 }
 
 @media (max-width: 768px) {
+    .portfolio-item:nth-child(even){
+        margin-top:0px;
+    }
     .main-heading {
         font-size: 48px;
         line-height: 60px;
     }
 
     .portfolio-item {
-        margin-top:300px;
+        margin-bottom: 100px;
         width: 100%;
     }
 
     .contact-email {
         font-size: 36px;
     }
-
 }
