@@ -60,6 +60,9 @@
     font-weight: 900;
     font-style: normal;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Freesentation', sans-serif;
