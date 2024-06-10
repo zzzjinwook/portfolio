@@ -78,10 +78,11 @@ body {
     align-items: center;
     position: fixed;
     margin: 30px auto;
-    padding: 0 20px;
     top: 0;
     z-index: 1000;
+    box-sizing: border-box;
 }
+
 
 .nav-link {
     font-size: 22px;
@@ -148,9 +149,11 @@ body {
 
 .about {
     padding-top: 192px;
-    padding-bottom: 230px;
+    padding-bottom: 130px;
     width: 100%;
     text-align: left;
+    max-width: 760px;
+    margin-top: 200px;
 }
 
 .about-text {
@@ -174,6 +177,7 @@ body {
     padding-bottom: 4px;
     width: 100%;
     text-align: left;
+    max-width: 760px;
 }
 
 .contact-text {
@@ -216,7 +220,8 @@ body {
     }
 
     .nav-container {
-        padding: 20px;
+        padding: 0 20px; /* 바디와 동일한 여백 */
+        box-sizing: border-box; /* 추가 */
     }
 
     .portfolio-item {
@@ -232,9 +237,8 @@ body {
     }
 
     .portfolio-item {
+        margin-top:300px;
         width: 100%;
-        margin-top: 100px;
-        margin-bottom: 100px; /* 세로 여백 추가 */
     }
 
     .contact-email {
