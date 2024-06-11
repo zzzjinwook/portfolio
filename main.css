@@ -198,10 +198,7 @@ body {
     font-weight: 600;
     color: #333333;
 }
-.mb-60{
-    margin-bottom: -60px;
 
-}
 
 .more-link {
     display: block;
@@ -383,31 +380,31 @@ div {
 }
 
 .design-dot {
-    width:100%;
+    width: 100%;
     text-align: center;
     align-items: center;
     align-content: center;
 }
 
 
-.portfolio-team{
+.portfolio-team {
     font-weight: 500;
     font-size: 14px;
     width: 100px;
-    height:fit-content;
+    height: fit-content;
     padding: 4px 8px;
     border-radius: 100px;
-    border:none;
+    border: none;
     background-color: #111111;
-    color:#d9eefc;
+    color: #d9eefc;
     margin: 20px auto 0px;
 }
 
-.gray{
+.gray {
     color: #666666;
 }
 
-.animated-text{
+.animated-text {
     color: #333333;
     top: 50%;
     left: 50%;
@@ -417,42 +414,53 @@ div {
     font-size: 60px;
     font-weight: 600;
     width: fit-content;
-  }
-  
-  .line{
+}
+
+.line {
     text-transform: uppercase;
     text-align: start;
     font-size: 60px;
     line-height: 60px;
-  }
-  
-  .line:first-child{
+}
+
+.line:first-child {
     animation: anim 16s infinite;
-  }
-  
-  @keyframes anim {
-    0%{
-      margin-top : 0;
+}
+
+.mb-60 {
+    margin-bottom: -60px;
+}
+
+@keyframes anim {
+    0% {
+        margin-top: 0;
     }
-    16%{
-      margin-top : -60px;
+
+    16% {
+        margin-top: -60px;
     }
-    33%{
-      margin-top : -120px;
+
+    33% {
+        margin-top: -120px;
     }
-    50%{
-      margin-top : -180px;
+
+    50% {
+        margin-top: -180px;
     }
-    66%{
-      margin-top : -120px;
+
+    66% {
+        margin-top: -120px;
     }
-    82%{
-      margin-top : -60px;
+
+    82% {
+        margin-top: -60px;
     }
-    100%{
-      margin-top : 0;
+
+    100% {
+        margin-top: 0;
     }
-  }
+}
+
 @media (max-width: 1200px) {
     .wrapper {
         padding-left: 20px;
@@ -493,6 +501,62 @@ div {
     }
 
 
+    .animated-text {
+        color: #333333;
+        top: 50%;
+        left: 50%;
+        transform: translate(0%, -109%);
+        height: 40px;
+        overflow: hidden;
+        font-size: 40px;
+        font-weight: 600;
+        width: fit-content;
+    }
+
+    .line {
+        text-transform: uppercase;
+        text-align: start;
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .line:first-child {
+        animation: anim 16s infinite;
+    }
+
+    .mb-60 {
+        margin-bottom: -40px;
+    }
+
+    @keyframes anim {
+        0% {
+            margin-top: 0;
+        }
+
+        16% {
+            margin-top: -40px;
+        }
+
+        33% {
+            margin-top: -80px;
+        }
+
+        50% {
+            margin-top: -120px;
+        }
+
+        66% {
+            margin-top: -80px;
+        }
+
+        82% {
+            margin-top: -40px;
+        }
+
+        100% {
+            margin-top: 0;
+        }
+    }
 }
 
 @media (max-width: 768px) {
