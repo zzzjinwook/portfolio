@@ -459,8 +459,8 @@ div {
     margin-bottom: 10px;
 }
 .detail-title{
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: 600;
     flex-shrink: 0;
     width:300px;
 }
@@ -518,6 +518,15 @@ hr{
     color: #666666;
     text-decoration:none;
 }
+
+
+.contact-detail-title{
+    font-size: 48px;
+    font-weight: 600;
+    flex-shrink: 0;
+    width: 300px;
+}
+
 @keyframes anim {
     0% {
         margin-top: 0;
@@ -676,5 +685,20 @@ hr{
         text-align: left;
         max-width: 760px;
         margin-top: 0px;
+    }
+
+    .detail-row{
+        flex-direction: column;
+
+    }
+
+    .detail-title{
+        margin-top: 40px;
+        width: 100%;
+        font-size: 28px;
+    }
+
+    .detail-content{
+        margin-left:0;
     }
 }
