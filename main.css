@@ -60,8 +60,11 @@
     font-weight: 900;
     font-style: normal;
 }
+
 html {
     scroll-behavior: smooth;
+    font-family: 'Freesentation', sans-serif;
+    word-break: keep-all;
 }
 
 body {
@@ -111,8 +114,8 @@ body {
 }
 
 .main-heading {
-    font-size: 71px;
-    font-weight: 600;
+    font-size: 72px;
+    font-weight: 700;
     line-height: 86px;
 }
 
@@ -125,22 +128,23 @@ body {
 
 .portfolio-item {
     width: 48%;
-    margin-bottom: -200px;
+    max-width: 540px;
     position: relative;
     text-align: center;
-    overflow: hidden;
-    transition: all .8s cubic-bezier(0.2, 0.6, 0.2, 1);
+    margin-bottom: -250px;
+    padding-bottom: -200px;
 }
 
-.portfolio-item:hover {
+.portfolio-wrapper:hover {
     transform: scale(.95);
     transition: all .8s cubic-bezier(0.2, 0.6, 0.2, 1);
     cursor: pointer;
 }
 
 .portfolio-wrapper {
-    border-radius: 24px;
+    border-radius: 28px;
     overflow: hidden;
+    transition: all .8s cubic-bezier(0.2, 0.6, 0.2, 1);
 }
 
 .portfolio-wrapper:hover .portfolio-image {
@@ -161,14 +165,14 @@ body {
 }
 
 .portfolio-title {
-    font-size: 22px;
-    font-weight: 500;
+    font-size: 32px;
+    font-weight: 700;
     margin-top: 24px;
 }
 
 .portfolio-subtitle {
-    font-size: 18px;
-    font-weight: 300;
+    font-size: 28px;
+    font-weight: 400;
     color: #666666;
     margin-top: 8px;
 }
@@ -183,14 +187,14 @@ body {
 }
 
 .about-text {
-    font-size: 21px;
-    font-weight: 300;
+    font-size: 28px;
+    font-weight: 400;
     line-height: 35px;
     color: #333333;
 }
 
 .about-title {
-    font-size: 28px;
+    font-size: 60px;
     font-weight: 600;
     color: #333333;
 }
@@ -261,6 +265,126 @@ body {
     z-index: 1000;
 }
 
+.to-top-button {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.to-top-button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#txt-arrow {
+    font-size: 28px;
+    margin: 0px;
+    padding: 0px;
+    line-height: 28px;
+    font-weight: 400;
+    color: rgb(17, 136, 255);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.portfolio-description-wrapper {
+    color: #111111;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    margin-top: 36px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.portfolio-content {
+    color: #666666;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 10px 0 20px 0;
+}
+
+.portfolio-content ul {
+    text-align: left;
+    margin: 0px;
+}
+
+div {
+    cursor: pointer;
+}
+
+.main-heading:hover .highlight-lg:after {
+    width: 100%;
+}
+
+.highlight-lg {
+    display: inline-block;
+    position: relative;
+}
+
+.highlight-lg:after {
+    content: "";
+    width: 0;
+    height: 72px;
+    display: inline-block;
+    background: #d9eefc;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.2s all;
+}
+
+.portfolio-item:hover .highlight:after {
+    width: 100%;
+}
+
+.highlight {
+    display: inline-block;
+    position: relative;
+}
+
+.highlight:after {
+    content: "";
+    width: 0;
+    height: 24px;
+    display: inline-block;
+    background: #d9eefc;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.2s all;
+}
+
+.design-dot {
+    width:100%;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
 @media (max-width: 1200px) {
     .wrapper {
         padding-left: 20px;
@@ -268,24 +392,53 @@ body {
     }
 
     .nav-container {
-        padding: 0 20px;
-        /* 바디와 동일한 여백 */
+        font-family: 'Freesentation', sans-serif;
+        max-width: 1200px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
         box-sizing: border-box;
-        /* 추가 */
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        padding: 30px 20px 20px 20px;
     }
 
     .portfolio-item {
         width: 48%;
     }
+
+    .about-text {
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 35px;
+        color: #333333;
+    }
+
+    .about-title {
+        font-size: 40px;
+        font-weight: 600;
+        color: #333333;
+    }
+
+
 }
 
 @media (max-width: 768px) {
-    .portfolio-item:nth-child(even){
-        margin-top:0px;
+    .portfolio-item:nth-child(even) {
+        margin-top: 0px;
     }
+
     .main-heading {
         font-size: 48px;
         line-height: 60px;
+    }
+
+    .nav-link {
+        font-size: 16px;
     }
 
     .portfolio-item {
@@ -295,5 +448,14 @@ body {
 
     .contact-email {
         font-size: 36px;
+    }
+
+    .about {
+        padding-top: 0px;
+        padding-bottom: 130px;
+        width: 100%;
+        text-align: left;
+        max-width: 760px;
+        margin-top: 0px;
     }
 }

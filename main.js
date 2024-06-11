@@ -17,3 +17,16 @@ function showCopiedMessage() {
     }, 2000);
 }
 
+const toTopButton = document.getElementById('toTopButton');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+        toTopButton.classList.add('show');
+    } else {
+        toTopButton.classList.remove('show');
+    }
+});
+
+toTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
