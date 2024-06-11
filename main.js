@@ -30,3 +30,28 @@ window.addEventListener('scroll', () => {
 toTopButton.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+function copyGmail() {
+    var gmailLink = document.getElementById("gmail-link");
+    var originalText = gmailLink.innerHTML;
+
+    navigator.clipboard.writeText('zzzjinwook98@gmail.com').then(function() {
+        gmailLink.innerHTML = '복사완료!';
+        setTimeout(function() {
+            gmailLink.innerHTML = originalText;
+        }, 2000);
+    }, function(err) {
+        console.error('Could not copy text: ', err);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('.more-link').addEventListener('click', function (e) {
+        e.preventDefault();
+        var arrow = document.getElementById('txt-arrow');
+        var detailInfo = document.querySelector('.detail-info');
+
+        arrow.classList.toggle('rotate');
+        detailInfo.classList.toggle('show');
+    });
+});

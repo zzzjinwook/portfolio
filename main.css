@@ -131,7 +131,7 @@ body {
     max-width: 540px;
     position: relative;
     text-align: center;
-    margin-bottom: -250px;
+    margin-bottom: -200px;
     padding-bottom: -200px;
 }
 
@@ -153,7 +153,7 @@ body {
 }
 
 .portfolio-item:nth-child(even) {
-    margin-top: 350px;
+    margin-top: 400px;
 }
 
 .portfolio-image {
@@ -179,7 +179,7 @@ body {
 
 .about {
     padding-top: 192px;
-    padding-bottom: 130px;
+    padding-bottom: 160px;
     width: 100%;
     text-align: left;
     max-width: 760px;
@@ -202,10 +202,9 @@ body {
 
 .more-link {
     display: block;
-    font-size: 22px;
-    font-weight: 500;
+    font-size: 24px;
+    font-weight: 600;
     color: #111111;
-    margin-top: 31px;
     text-decoration: none;
 }
 
@@ -431,6 +430,94 @@ div {
     margin-bottom: -60px;
 }
 
+.detail-info {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.detail-info.show {
+    display: block;
+    opacity: 1;
+}
+
+#txt-arrow {
+    display: inline-block;
+    transition: transform 0.5s ease-in-out;
+}
+
+#txt-arrow.rotate {
+    transform: rotate(90deg);
+}
+
+.detail-row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.detail-title{
+    font-size: 22px;
+    font-weight: 500;
+    flex-shrink: 0;
+    width:300px;
+}
+
+.detail-date{
+    font-size: 16px;
+    font-weight: 400;
+    margin-top : 10px;
+    color:#666666;
+}
+.detail-content{
+    margin-left:16px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+hr{
+    border: 1px solid #eeeeee;
+}
+
+.non-deco{
+    text-decoration: none!important;
+    color:#111111;
+    position: relative;
+    display: inline-block;
+}
+
+.non-deco::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.non-deco:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.detail-desc{
+    font-size: 22px;
+    font-weight: 300;
+}
+.portfolio-link{
+    margin-bottom: 10px;
+}
+.portfolio-link-text{
+    font-size:20px;
+    font-weight: 400;
+    color: #666666;
+    text-decoration:none;
+}
 @keyframes anim {
     0% {
         margin-top: 0;
@@ -491,7 +578,7 @@ div {
         font-size: 28px;
         font-weight: 400;
         line-height: 35px;
-        color: #333333;
+        color: #666666;
     }
 
     .about-title {
@@ -584,7 +671,7 @@ div {
 
     .about {
         padding-top: 0px;
-        padding-bottom: 130px;
+        padding-bottom: 160px;
         width: 100%;
         text-align: left;
         max-width: 760px;
