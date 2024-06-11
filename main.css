@@ -114,7 +114,7 @@ body {
 }
 
 .main-heading {
-    font-size: 72px;
+    font-size: 80px;
     font-weight: 700;
     line-height: 86px;
 }
@@ -167,7 +167,7 @@ body {
 .portfolio-title {
     font-size: 32px;
     font-weight: 700;
-    margin-top: 24px;
+    margin-top: 12px;
 }
 
 .portfolio-subtitle {
@@ -197,6 +197,10 @@ body {
     font-size: 60px;
     font-weight: 600;
     color: #333333;
+}
+.mb-60{
+    margin-bottom: -60px;
+
 }
 
 .more-link {
@@ -346,7 +350,7 @@ div {
 .highlight-lg:after {
     content: "";
     width: 0;
-    height: 72px;
+    height: 80px;
     display: inline-block;
     background: #d9eefc;
     position: absolute;
@@ -385,6 +389,70 @@ div {
     align-content: center;
 }
 
+
+.portfolio-team{
+    font-weight: 500;
+    font-size: 14px;
+    width: 100px;
+    height:fit-content;
+    padding: 4px 8px;
+    border-radius: 100px;
+    border:none;
+    background-color: #111111;
+    color:#d9eefc;
+    margin: 20px auto 0px;
+}
+
+.gray{
+    color: #666666;
+}
+
+.animated-text{
+    color: #333333;
+    top: 50%;
+    left: 50%;
+    transform: translate(0%, -109%);
+    height: 60px;
+    overflow: hidden;
+    font-size: 60px;
+    font-weight: 600;
+    width: fit-content;
+  }
+  
+  .line{
+    text-transform: uppercase;
+    text-align: start;
+    font-size: 60px;
+    line-height: 60px;
+  }
+  
+  .line:first-child{
+    animation: anim 16s infinite;
+  }
+  
+  @keyframes anim {
+    0%{
+      margin-top : 0;
+    }
+    16%{
+      margin-top : -60px;
+    }
+    33%{
+      margin-top : -120px;
+    }
+    50%{
+      margin-top : -180px;
+    }
+    66%{
+      margin-top : -120px;
+    }
+    82%{
+      margin-top : -60px;
+    }
+    100%{
+      margin-top : 0;
+    }
+  }
 @media (max-width: 1200px) {
     .wrapper {
         padding-left: 20px;
